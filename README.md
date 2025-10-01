@@ -7,7 +7,7 @@ This repository provides a **reproducible workflow** for **medical image segment
 For **each organ**, we run **three AI models** (TotalSegmentator, MONAI SegResNet, and ST-UNet), visualize results in **2D** and **3D**, and compute **evaluation metrics**: **IoU**, **Dice**, **ASSD (mm)**.  
 A lightweight **GUI** lets you switch organs/models and control **color**, **visibility**, **opacity**, and **run evaluation** interactively.
 
-> **# IMAGE HERE** – *Project architecture diagram (Data → Models → 2D/3D Viz → Evaluation → GUI)*
+![Image Alt]([image_url](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/b474029b39007524968881a722420049d5f59a9b/assets/overview-lung.png)) 
 
 ---
 
