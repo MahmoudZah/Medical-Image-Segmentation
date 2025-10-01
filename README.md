@@ -1,13 +1,9 @@
-# Medical Image Segmentation
-
 
 ## **Overview**
 
 This repository provides a **reproducible workflow** for **medical image segmentation** from **CT** scans.  
 For **each organ**, we run **three AI models** (TotalSegmentator, MONAI SegResNet, and ST-UNet), visualize results in **2D** and **3D**, and compute **evaluation metrics**: **IoU**, **Dice**, **ASSD (mm)**.  
 A lightweight **GUI** lets you switch organs/models and control **color**, **visibility**, **opacity**, and **run evaluation** interactively.
-
-![Image Alt]([image_url](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/b474029b39007524968881a722420049d5f59a9b/assets/overview-lung.png)) 
 
 ---
 
@@ -20,7 +16,7 @@ A lightweight **GUI** lets you switch organs/models and control **color**, **vis
 - **Interactive GUI:** choose *organ* and *model*, adjust *color*, *visibility*, *opacity*, and **Run Evaluation**  
 - **Reproducible scripts:** consistent steps for download/setup/run
 
-> **# IMAGE HERE** – *Screenshot of the GUI with organ/model selectors and color/opacity controls*
+![Image Alt](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/main/assets/overview-lung.png?raw=true)
 
 ---
 
@@ -33,8 +29,9 @@ A lightweight **GUI** lets you switch organs/models and control **color**, **vis
 5. **Evaluation** with **IoU**, **Dice**, **ASSD (mm)**  
 6. **GUI** to switch organs/models and run evaluation on demand
 
-> **# IMAGE HERE** – *Example 2D slice with overlay (GT vs prediction)*  
-> **# IMAGE HERE** – *3D organ mesh (e.g., liver) showing multiple colored parts*
+
+![Video Alt](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/main/assets/ttlsmgntHeart.gif?raw=true)  ![Video Alt](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/main/assets/ttlsgmntLiver.gif?raw=true)
+                                                                                                                    
 
 ---
 
