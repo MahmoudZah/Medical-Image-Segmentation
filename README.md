@@ -1,7 +1,7 @@
 
 ## **Overview**
 
-This repository provides a **reproducible workflow** for **medical image segmentation** from **CT** scans.  
+This repository provides a **workflow** for **medical image segmentation** from **CT** scans.  
 For **each organ**, we run **Two AI models** (TotalSegmentator, and ST-UNet), visualize results in **2D** and **3D**, and compute **evaluation metrics**: **IoU**, **Dice**, **ASSD (mm)**.  
 A lightweight **GUI** lets you switch organs/models and control **color**, **visibility**, **opacity**, and **run evaluation** interactively.
 
@@ -31,7 +31,25 @@ A lightweight **GUI** lets you switch organs/models and control **color**, **vis
 
 
 ![Video Alt](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/main/assets/ttlsmgntHeart.gif?raw=true)  ![Video Alt](https://github.com/MahmoudZah/Medical-Image-Segmentation-/blob/main/assets/ttlsgmntLiver.gif?raw=true)
-                                                                                                                    
+
+---
+
+## Setup Me "powershell" 
+
+```bibtex
+
+pip install numpy scipy matplotlib scikit-image nibabel
+
+pip install pyqt5 pyvista pyvistaqt
+
+pip install torch torchvision torchaudio
+
+pip install medim
+
+pip install TotalSegmentator
+
+
+```
 
 ---
 
