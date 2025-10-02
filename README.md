@@ -2,7 +2,7 @@
 ## **Overview**
 
 This repository provides a **reproducible workflow** for **medical image segmentation** from **CT** scans.  
-For **each organ**, we run **three AI models** (TotalSegmentator, MONAI SegResNet, and ST-UNet), visualize results in **2D** and **3D**, and compute **evaluation metrics**: **IoU**, **Dice**, **ASSD (mm)**.  
+For **each organ**, we run **Two AI models** (TotalSegmentator, and ST-UNet), visualize results in **2D** and **3D**, and compute **evaluation metrics**: **IoU**, **Dice**, **ASSD (mm)**.  
 A lightweight **GUI** lets you switch organs/models and control **color**, **visibility**, **opacity**, and **run evaluation** interactively.
 
 ---
@@ -37,13 +37,10 @@ A lightweight **GUI** lets you switch organs/models and control **color**, **vis
 
 ## **Models**
 
-- **TotalSegmentator** — whole-body labels (104 classes) re-used per organ  
-- **MONAI SegResNet** — strong 3D backbone configured for organ-level segmentation  
+- **TotalSegmentator** — whole-body labels (104 classes) re-used per organ   
 - **ST-UNet** — U-Net variant adapted for CT volumes
 
 Each organ can map to **any subset** of these models; results are saved per model to enable side-by-side comparison.
-
-> **# IMAGE HERE** – *Grid: the same organ segmented by the 3 models (qualitative comparison)*
 
 ---
 
@@ -59,38 +56,13 @@ Each organ can map to **any subset** of these models; results are saved per mode
   \]
 - **ASSD (mm)** — *Average Symmetric Surface Distance:* mean bidirectional surface distance between predicted and GT surfaces, reported in **millimeters**.
 
-> **# IMAGE HERE** – *Bar chart of Dice/IoU per model for one organ (e.g., liver)*
-
----
-## **Evaluation Results**
-
-| Organ | Model            | **Dice ↑** | **IoU ↑** | **ASSD (mm) ↓** |
-| ----: | ---------------- | :--------: | :-------: | :-------------: |
-| Heart | TotalSegmentator |    0.94    |    0.89   |       1.8       |
-| Heart | MONAI SegResNet  |    0.93    |    0.87   |       2.1       |
-| Heart | ST-UNet          |    0.91    |    0.84   |       2.7       |
-
-| Organ | Model            | **Dice ↑** | **IoU ↑** | **ASSD (mm) ↓** |
-| ----: | ---------------- | :--------: | :-------: | :-------------: |
-| Lung | TotalSegmentator |    0.94    |    0.89   |       1.8       |
-| Lung | MONAI SegResNet  |    0.93    |    0.87   |       2.1       |
-| Lung | ST-UNet          |    0.91    |    0.84   |       2.7       |
-
-| Organ | Model            | **Dice ↑** | **IoU ↑** | **ASSD (mm) ↓** |
-| ----: | ---------------- | :--------: | :-------: | :-------------: |
-| Liver | TotalSegmentator |    0.94    |    0.89   |       1.8       |
-| Liver | MONAI SegResNet  |    0.93    |    0.87   |       2.1       |
-| Liver | ST-UNet          |    0.91    |    0.84   |       2.7       |
-
 ---
 ## **Licenses**
 
 | Model / Framework                        | License                                     | Notes / Source                                                                                                                                              |
 | ---------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **TotalSegmentator**                     | **Apache License 2.0** ([GitHub][1])        | The official repo states “Apache-2.0 license” ([GitHub][1])                                                                                                 |
-| **MONAI / SegResNet (as part of MONAI)** | **Apache License 2.0** ([Project MONAI][2]) | The `segresnet` source file is explicitly licensed under Apache-2.0 ([Project MONAI][2])                                                                    |
+| **TotalSegmentator**                     | **Apache License 2.0** ([GitHub][1])        | The official repo states “Apache-2.0 license” ([GitHub][1])                                                              
 [1]: https://github.com/wasserth/TotalSegmentator/ "wasserth/TotalSegmentator: Tool for robust segmentation of ... - GitHub"
-[2]: https://monai-dev.readthedocs.io/en/latest/_modules/monai/networks/nets/segresnet.html/ "Source code for monai.networks.nets.segresnet"
 
 ---
 
